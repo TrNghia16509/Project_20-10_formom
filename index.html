@@ -312,7 +312,7 @@
         <!-- Screen 4: Final -->
         <div class="screen screen-4">
             <div class="final-card">
-                <div src="https://raw.githubusercontent.com/TrNghia16509/Project_20-10_formom/main/mẹ.png" class="girl-emoji" height="150"></div>
+                <div id="momImage" class="girl-image" src=""></div>
                 <p class="final-message">Chúc mẹ luôn<br>may mắn, <br>thành công và <br>mạnh khỏe</p>
                 <div class="flowers-final">💐</div>
             </div>
@@ -399,7 +399,7 @@
         // Thay 'mom.jpg' bằng tên file ảnh của bạn
         const momImageUrl = '/mẹ.jpg'; // hoặc '/mom.jpg' hoặc 'images/mom.jpg' tùy vị trí file
         
-        const img = document.getElementById('momImageUrl');
+        const img = document.getElementById('momImage');
         const emoji = document.getElementById('defaultEmoji');
         
         img.onload = function() {
