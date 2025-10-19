@@ -395,6 +395,24 @@
         // Initial hearts
         createHearts();
         setInterval(createHearts, 4000);
+        // Load mom's image from GitHub repo
+        // Thay 'mom.jpg' bằng tên file ảnh của bạn
+        const momImageUrl = '/.png'; // hoặc '/mom.jpg' hoặc 'images/mom.jpg' tùy vị trí file
+        
+        const img = document.getElementById('momImage');
+        const emoji = document.getElementById('defaultEmoji');
+        
+        img.onload = function() {
+            img.classList.add('show');
+            emoji.style.display = 'none';
+        };
+        
+        img.onerror = function() {
+            console.log('Không tìm thấy ảnh, hiển thị emoji mặc định');
+            emoji.style.display = 'inline-block';
+        };
+        
+        img.src = momImageUrl;
     </script>
 </body>
 </html>
