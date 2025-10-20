@@ -147,9 +147,12 @@
         }
 
         .girl-image {
-            font-size: 120px;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
             margin-bottom: 20px;
-            display: inline-block;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
         }
 
         .final-message {
@@ -264,7 +267,7 @@
             .bunny-card { padding: 40px 50px; }
             .flower-bouquet { font-size: 150px; }
             .message-card { padding: 30px; }
-            .girl-image { font-size: 100px; }
+            .girl-image { width: 150px; height: 150px; }
             .nav-button { bottom: 20px; right: 20px; padding: 12px 30px; font-size: 1rem; }
             .greeting-text { font-size: 1.5rem; }
         }
@@ -301,8 +304,8 @@
             <div class="message-card">
                 <h2 class="message-title">💐 Gửi mẹ yêu 💐</h2>
                 <div class="message-content">
-                    <p>Hôm nay là 20/10 — một ngày đặc biệt dành cho những người phụ nữ tuyệt vời nhất trên khắp Việt .</p>
-                    <p>Mẹ chính là người phụ nữ phi thường trong lòng con — luôn dịu dàng, hiền hậu và hy sinh thầm lặng cho con và gia .</p>
+                    <p>Hôm nay là 20/10 — một ngày đặc biệt dành cho những người phụ nữ tuyệt vời nhất trên khắp Việt Nam.</p>
+                    <p>Mẹ chính là người phụ nữ phi thường trong lòng con — luôn dịu dàng, hiền hậu và hy sinh thầm lặng cho con và gia đình.</p>
                     <p>Cảm ơn mẹ đã luôn là chỗ dựa vững chắc, là nguồn yêu thương vô điều kiện trong cuộc đời con.</p>
                     <p>Chúc mẹ luôn mạnh khỏe, hạnh phúc và mãi nở nụ cười thật tươi mỗi ngày.</p>
                 </div>
@@ -312,8 +315,8 @@
         <!-- Screen 4: Final -->
         <div class="screen screen-4">
             <div class="final-card">
-                <div src="https://raw.githubusercontent.com/TrNghia16509/Project_20-10_formom/main/mẹ.png" class="girl-image" src=""></div>
-                <p class="final-message">Chúc mẹ luôn<br>may mắn, <br>thành công và <br>mạnh khỏe</p>
+                <img id="momImage" class="girl-image" src="https://raw.githubusercontent.com/TrNghia16509/Project_20-10_formom/main/mẹ.png" alt="Mẹ yêu">
+                <p class="final-message">Chúc mẹ luôn<br>may mắn,<br>thành công và<br>mạnh khỏe</p>
                 <div class="flowers-final">💐</div>
             </div>
         </div>
@@ -395,24 +398,6 @@
         // Initial hearts
         createHearts();
         setInterval(createHearts, 4000);
-        // Load mom's image from GitHub repo
-        // Thay 'mom.jpg' bằng tên file ảnh của bạn
-        const momImageUrl = '/mẹ.jpg'; // hoặc '/mom.jpg' hoặc 'images/mom.jpg' tùy vị trí file
-        
-        const img = document.getElementById('momImage');
-        const emoji = document.getElementById('defaultEmoji');
-        
-        img.onload = function() {
-            img.classList.add('show');
-            emoji.style.display = 'none';
-        };
-        
-        img.onerror = function() {
-            console.log('Không tìm thấy ảnh, hiển thị emoji mặc định');
-            emoji.style.display = 'inline-block';
-        };
-        
-        img.src = momImageUrl;
     </script>
 </body>
 </html>
